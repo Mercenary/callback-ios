@@ -7,16 +7,16 @@
 
 #import <Foundation/Foundation.h>
 #import "PGPlugin.h"
-#import "Reachability.h"
+#import "PGReachability.h"
 
 
 @interface PGConnection : PGPlugin {
 	NSString* type;
 	
-	Reachability* internetReach;
+	PGReachability* internetReach;
 }
 
 @property (copy) NSString* connectionType;
-@property (retain) Reachability* internetReach;
+@property (retain) PGReachability* internetReach;
 
 @end

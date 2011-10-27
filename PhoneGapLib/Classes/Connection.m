@@ -7,7 +7,7 @@
 
 
 #import "Connection.h"
-#import "Reachability.h"
+#import "PGReachability.h"
 
 @interface PGConnection(PrivateMethods)
 - (void) updateOnlineStatus;
@@ -17,7 +17,7 @@
 
 @synthesize connectionType, internetReach;
 
-- (NSString*) w3cConnectionTypeFor:(Reachability*)reachability
+- (NSString*) w3cConnectionTypeFor:(PGReachability*)reachability
 {
 	NetworkStatus networkStatus = [reachability currentReachabilityStatus];
 	switch(networkStatus)
@@ -40,7 +40,7 @@
 			[theConnectionType isEqualToString:@"4g"];
 }
 
-- (void) updateReachability:(Reachability*)reachability
+- (void) updateReachability:(PGReachability*)reachability
 {
 	if (reachability) {
 		self.connectionType = [self w3cConnectionTypeFor:reachability];
@@ -57,9 +57,9 @@
 
 - (void) updateConnectionType:(NSNotification*)note
 {
-	Reachability* curReach = [note object];
+	PGReachability* curReach = [note object];
 
-	if (curReach != nil && [curReach isKindOfClass:[Reachability class]])
+	if (curReach != nil && [curReach isKindOfClass:[PGReachability class]])
 	{
 		[self updateReachability:curReach];
 	}
@@ -82,7 +82,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateConnectionType:) 
 												 name:kReachabilityChangedNotification object:nil];
 	
-	self.internetReach = [Reachability reachabilityForInternetConnection];
+	self.internetReach = [PGReachability reachabilityForInternetConnection];
 	[self.internetReach startNotifier];
 	self.connectionType = [self w3cConnectionTypeFor:self.internetReach];
 	

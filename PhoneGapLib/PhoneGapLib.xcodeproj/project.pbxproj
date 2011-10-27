@@ -45,7 +45,7 @@
 		303259A2136B325100982B63 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD511090FBE7009987E8 /* NSData+Base64.m */; };
 		303259A4136B325100982B63 /* PhoneGapDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD5B1090FBE7009987E8 /* PhoneGapDelegate.m */; };
 		303259A5136B325100982B63 /* PhoneGapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD5D1090FBE7009987E8 /* PhoneGapViewController.m */; };
-		303259A6136B325100982B63 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD5F1090FBE7009987E8 /* Reachability.m */; };
+		303259A6136B325100982B63 /* PGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD5F1090FBE7009987E8 /* PGReachability.m */; };
 		303259A7136B325100982B63 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD611090FBE7009987E8 /* Sound.m */; };
 		303259A8136B325100982B63 /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BA573C109BB46F00FB5E78 /* Accelerometer.m */; };
 		303259AA136B325100982B63 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C04CD12BC247D004F9E10 /* Contact.m */; };
@@ -62,7 +62,7 @@
 		303259C0136B326300982B63 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD501090FBE7009987E8 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		303259C2136B326300982B63 /* PhoneGapDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD5A1090FBE7009987E8 /* PhoneGapDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		303259C3136B326300982B63 /* PhoneGapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD5C1090FBE7009987E8 /* PhoneGapViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		303259C4136B326300982B63 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD5E1090FBE7009987E8 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		303259C4136B326300982B63 /* PGReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD5E1090FBE7009987E8 /* PGReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		303259C5136B326300982B63 /* Sound.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD601090FBE7009987E8 /* Sound.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		303259C6136B326300982B63 /* Accelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 88BA573B109BB46F00FB5E78 /* Accelerometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		303259C8136B326300982B63 /* Contact.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3C04CC12BC247D004F9E10 /* Contact.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -144,8 +144,8 @@
 		8887FD9A1090FBE7009987E8 /* PhoneGapDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD5B1090FBE7009987E8 /* PhoneGapDelegate.m */; };
 		8887FD9B1090FBE7009987E8 /* PhoneGapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD5C1090FBE7009987E8 /* PhoneGapViewController.h */; };
 		8887FD9C1090FBE7009987E8 /* PhoneGapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD5D1090FBE7009987E8 /* PhoneGapViewController.m */; };
-		8887FD9D1090FBE7009987E8 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD5E1090FBE7009987E8 /* Reachability.h */; };
-		8887FD9E1090FBE7009987E8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD5F1090FBE7009987E8 /* Reachability.m */; };
+		8887FD9D1090FBE7009987E8 /* PGReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD5E1090FBE7009987E8 /* PGReachability.h */; };
+		8887FD9E1090FBE7009987E8 /* PGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD5F1090FBE7009987E8 /* PGReachability.m */; };
 		8887FD9F1090FBE7009987E8 /* Sound.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD601090FBE7009987E8 /* Sound.h */; };
 		8887FDA01090FBE7009987E8 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887FD611090FBE7009987E8 /* Sound.m */; };
 		88BA573D109BB46F00FB5E78 /* Accelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 88BA573B109BB46F00FB5E78 /* Accelerometer.h */; };
@@ -238,8 +238,8 @@
 		8887FD5B1090FBE7009987E8 /* PhoneGapDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneGapDelegate.m; path = Classes/PhoneGapDelegate.m; sourceTree = "<group>"; };
 		8887FD5C1090FBE7009987E8 /* PhoneGapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneGapViewController.h; path = Classes/PhoneGapViewController.h; sourceTree = "<group>"; };
 		8887FD5D1090FBE7009987E8 /* PhoneGapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneGapViewController.m; path = Classes/PhoneGapViewController.m; sourceTree = "<group>"; };
-		8887FD5E1090FBE7009987E8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Classes/Reachability.h; sourceTree = "<group>"; };
-		8887FD5F1090FBE7009987E8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Classes/Reachability.m; sourceTree = "<group>"; };
+		8887FD5E1090FBE7009987E8 /* PGReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PGReachability.h; path = Classes/PGReachability.h; sourceTree = "<group>"; };
+		8887FD5F1090FBE7009987E8 /* PGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PGReachability.m; path = Classes/PGReachability.m; sourceTree = "<group>"; };
 		8887FD601090FBE7009987E8 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sound.h; path = Classes/Sound.h; sourceTree = "<group>"; };
 		8887FD611090FBE7009987E8 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sound.m; path = Classes/Sound.m; sourceTree = "<group>"; };
 		88BA573B109BB46F00FB5E78 /* Accelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Accelerometer.h; path = Classes/Accelerometer.h; sourceTree = "<group>"; };
@@ -406,8 +406,8 @@
 				8887FD471090FBE7009987E8 /* Location.m */,
 				8887FD4E1090FBE7009987E8 /* Notification.h */,
 				8887FD4F1090FBE7009987E8 /* Notification.m */,
-				8887FD5E1090FBE7009987E8 /* Reachability.h */,
-				8887FD5F1090FBE7009987E8 /* Reachability.m */,
+				8887FD5E1090FBE7009987E8 /* PGReachability.h */,
+				8887FD5F1090FBE7009987E8 /* PGReachability.m */,
 				8887FD601090FBE7009987E8 /* Sound.h */,
 				8887FD611090FBE7009987E8 /* Sound.m */,
 				302965BB13A94E9D007046C5 /* PGDebug.h */,
@@ -474,7 +474,7 @@
 				303259C0136B326300982B63 /* NSData+Base64.h in Headers */,
 				303259C2136B326300982B63 /* PhoneGapDelegate.h in Headers */,
 				303259C3136B326300982B63 /* PhoneGapViewController.h in Headers */,
-				303259C4136B326300982B63 /* Reachability.h in Headers */,
+				303259C4136B326300982B63 /* PGReachability.h in Headers */,
 				303259C5136B326300982B63 /* Sound.h in Headers */,
 				303259C6136B326300982B63 /* Accelerometer.h in Headers */,
 				303259C8136B326300982B63 /* Contact.h in Headers */,
@@ -508,7 +508,7 @@
 				8887FD8F1090FBE7009987E8 /* NSData+Base64.h in Headers */,
 				8887FD991090FBE7009987E8 /* PhoneGapDelegate.h in Headers */,
 				8887FD9B1090FBE7009987E8 /* PhoneGapViewController.h in Headers */,
-				8887FD9D1090FBE7009987E8 /* Reachability.h in Headers */,
+				8887FD9D1090FBE7009987E8 /* PGReachability.h in Headers */,
 				8887FD9F1090FBE7009987E8 /* Sound.h in Headers */,
 				88BA573D109BB46F00FB5E78 /* Accelerometer.h in Headers */,
 				1F3C04CE12BC247D004F9E10 /* Contact.h in Headers */,
@@ -721,7 +721,7 @@
 				303259A2136B325100982B63 /* NSData+Base64.m in Sources */,
 				303259A4136B325100982B63 /* PhoneGapDelegate.m in Sources */,
 				303259A5136B325100982B63 /* PhoneGapViewController.m in Sources */,
-				303259A6136B325100982B63 /* Reachability.m in Sources */,
+				303259A6136B325100982B63 /* PGReachability.m in Sources */,
 				303259A7136B325100982B63 /* Sound.m in Sources */,
 				303259A8136B325100982B63 /* Accelerometer.m in Sources */,
 				303259AA136B325100982B63 /* Contact.m in Sources */,
@@ -762,7 +762,7 @@
 				8887FD901090FBE7009987E8 /* NSData+Base64.m in Sources */,
 				8887FD9A1090FBE7009987E8 /* PhoneGapDelegate.m in Sources */,
 				8887FD9C1090FBE7009987E8 /* PhoneGapViewController.m in Sources */,
-				8887FD9E1090FBE7009987E8 /* Reachability.m in Sources */,
+				8887FD9E1090FBE7009987E8 /* PGReachability.m in Sources */,
 				8887FDA01090FBE7009987E8 /* Sound.m in Sources */,
 				88BA573E109BB46F00FB5E78 /* Accelerometer.m in Sources */,
 				1F3C04CF12BC247D004F9E10 /* Contact.m in Sources */,
